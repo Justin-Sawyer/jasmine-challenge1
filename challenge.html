@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jasmine-challenge1</title>
+
+    <!-- Load Jasmine Framework -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jasmine/3.6.0/jasmine.js" integrity="sha512-dqL4nYnbiMiNNy/V2zRK55QXSRVyu26KCuGoL8Zf5lDfKRRf8pBFW8RXe8at36QlB8s8bnOjKP6b5YTalHO6wQ==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jasmine/3.6.0/jasmine-html.js" integrity="sha512-bqig44hBpNuvBzxsqbHiqwRximGm4UfJAvOeNQHjB7++0D2u/3bcw4ZwmVsqrooii2UJ91oDI/6aANdp3BwcQQ==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jasmine/3.6.0/boot.js" integrity="sha512-igPP1Xd0hsvXVZGyfIYeUD779NLEA1Sj/5ts2C/e/22zeUqR6ehA7M/nNLuONalznkHQkGPBESNwzGpwBQD60g==" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jasmine/3.6.0/jasmine.css" integrity="sha512-XKXP02aeSNI5HsDB3+4MM0tSDXJTBFZpt99xL7PvMz3+A3aRy0F0Ne/CATK+Z72ckE/4Ev9OiosWQr5LtU284Q==" crossorigin="anonymous" />
+
+    <!-- Load scripts -->
+    <script type="text/javascript" src="scripts/challenge1.js"></script>
+
+    <!-- Load Tests -->
+    <script type="text/javascript" src="spec/challenge1Spec.js"></script>
+
+</head>
+<body>
+    <h1>Jasmine Testing</h1>
+    <h2>Red-Green-Refactor</h2>
+    <p>Develop code incrementally.</p>
+    <p>Start by writing code that fails (red!), then just enough to make it pass (green!).</p>
+
+    <h2>The challenge:</h2>
+    <p>Drink About is a simple function that will check the age and return a drink appropriate for your age. 
+    Create a function called whatCanIDrink. This function should take in age as parameter. The function should do the following:</p>
+    <br>
+    <p>If the age is less than 0, then it should return "Sorry. I can’t tell what drink because that age is incorrect!"</p>
+    <p>If the age is less than 14, then it should return "Drink Toddy"</p>
+    <p>If the age is less than 18, then it should return "Drink Coke"</p>
+    <p>If the age is less than 21, then it should return "Drink Beer"</p>
+    <p>If the age is less than 130, then it should return "Drink Whisky"</p>
+    <p>Else return "Sorry. I can’t tell what drink because that age is incorrect!"</p>
+    <br>
+    <h3>What am I testing for?</h3>
+    <p>Am I testing for age?</p>
+    <p>Yes... but age is what decides what I can drink.</p>
+    <p>Am I testing for the drink?</p>
+    <p>Yes. The drink I can consume is a result of what age I am.</p>
+    <br>
+    <p>Thus, the function should start with asking what I can drink, and have age as its parameter.</p>
+    <p>What can I drink? -&gt That depends on my age -&gt If I am this age, I can drink that.</p>
+    <p>So, the parameter "age" must be filled in. It must not return "undefined"</p>
+    <br>
+    <h2>Programming defensively</h2>
+    <p>What can break the code?</p>
+    <p>If the age value is not a Number, the code should return an alert.</p>
+    <br>
+    <p>What if the age is less than 0 or greater than 130?</p>
+    <p>These are values of the age parameter. A result should be returned, but not as an Error.</p>
+    
+</body>
+</html>
